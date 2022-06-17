@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn5.vectorstock.com/i/1000x1000/10/89/weather-forecast-vector-11181089.jpg">
+    <title>Weather Forcast Login Form</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background: url(https://i.pinimg.com/originals/bd/38/d4/bd38d4129a801496d715757dd616118b.jpg) no-repeat;
+        background-size: cover;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-family: sans-serif;
+    }
+    
+    .container {
+        position: relative;
+        margin-top: 100px;
+        width: 450px;
+        height: auto;
+        background: #dedede;
+        border-radius: 5px;
+    }
+    
+    .label {
+        padding: 20px 130px;
+        font-size: 35px;
+        font-weight: bold;
+        color: #130f40;
+    }
+    
+    .login_form {
+        padding: 20px 40px;
+    }
+    
+    .login_form .font {
+        font-size: 18px;
+        color: #130f40;
+        margin: 5px 0;
+    }
+    
+    .login_form input {
+        height: 40px;
+        width: 350px;
+        padding: 0 5px;
+        font-size: 18px;
+        outline: none;
+        border: 1px solid silver;
+    }
+    
+    .login_form .font2 {
+        margin-top: 30px;
+    }
+    
+    .login_form button {
+        margin: 45px 0 30px 0;
+        height: 45px;
+        width: 365px;
+        font-size: 20px;
+        color: white;
+        outline: none;
+        cursor: pointer;
+        font-weight: bold;
+        background: #1A237E;
+        border-radius: 3px;
+        border: 1px solid #3949AB;
+        transition: .5s;
+    }
+    
+    .login_form button:hover {
+        background: #151c6a;
+    }
+    
+    .login_form #email_error,
+    .login_form #pass_error {
+        margin-top: 5px;
+        width: 345px;
+        font-size: 18px;
+        color: #C62828;
+        background: rgba(255, 0, 0, 0.1);
+        text-align: center;
+        padding: 5px 8px;
+        border-radius: 3px;
+        border: 1px solid #EF9A9A;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="label">User Login</h1>
+        <form class="login_form" action="Valid login form/Weather.html" method="post" name="form" onsubmit="return validated()">
+            <div class="font">Email Id </div>
+            <input autocomplete="off" type="email" name="email" placeholder="Enter the email here" required>
+            <div id="email_error">Please fill up your Email id</div>
+            <div class="font font2">Password</div>
+            <input type="password" name="password" placeholder="Enter the password here" required>
+            <div id="pass_error">Please fill up your Password</div>
+            <button type="submit">Login</button>
+            <div class="c3">
+                <h3><a href="Valid login form/forgotpassword1.html">Forgot
+                        password?</a></h3>
+            </div>
+            <br>
+            <div class="c3">
+                <p>Don't have an account? <a href="Valid login form/Sign Up page (2).html">Sign Up Here</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        //Validtion Code For Inputs
+
+        var email = document.forms['form']['email'];
+        var password = document.forms['form']['password'];
+
+        var email_error = document.getElementById('email_error');
+        var pass_error = document.getElementById('pass_error');
+
+        email.addEventListener('textInput', email_Verify);
+        password.addEventListener('textInput', pass_Verify);
+
+        function validated() {
+            if (email.value.length < 9) {
+                email.style.border = "1px solid red";
+                email_error.style.display = "block";
+                email.focus();
+                return false;
+            }
+            if (password.value.length < 6) {
+                password.style.border = "1px solid red";
+                pass_error.style.display = "block";
+                password.focus();
+                return false;
+            }
+
+        }
+
+        function email_Verify() {
+            if (email.value.length >= 8) {
+                email.style.border = "1px solid silver";
+                email_error.style.display = "none";
+                return true;
+            }
+        }
+
+        function pass_Verify() {
+            if (password.value.length >= 5) {
+                password.style.border = "1px solid silver";
+                pass_error.style.display = "none";
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

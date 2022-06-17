@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up page</title>
+    <link rel="icon" href="https://cdn5.vectorstock.com/i/1000x1000/10/89/weather-forecast-vector-11181089.jpg">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    input[type=text]:focus,
+    input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    button {
+        background-color: #0446aa;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    
+    button:hover {
+        opacity: 1;
+    }
+    
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+    }
+    
+    .cancelbtn,
+    .signupbtn {
+        width: 33%;
+    }
+    
+    .container {
+        background-color: #fdfdfd;
+        padding: 16px;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #4b5d47;
+        padding-top: 50px;
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+    
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #f1f1f1;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #f44336;
+        cursor: pointer;
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    @media screen and (max-width: 50px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+    
+    body {
+        background-image: url(https://c0.wallpaperflare.com/preview/416/337/233/weather-news-reporter-man.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 43%;
+        width: 54%;
+        float: right;
+    }
+</style>
+
+</style>
+
+<body>
+
+    <form action="Weather.html" style="border:1px solid #ccc">
+        <div class="container">
+
+            <body style="background-color:rgb(176, 222, 230);">
+                <h1>Sign Up</h1>
+
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="First Name"><b>First Name</b></label>
+                <input type="text" placeholder="Enter first name" name="First Name" required>
+                <label for="Last Name"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last name" name="Last Name" required>
+                <label for="start"><b>Date of Birth:</b></label>
+                <input type="date" placeholder="start" name="trip-start" required>
+
+                <div>
+
+                    </label><br>
+                    <label for="Gender" required><b>Gender : </b></label>
+                    <input type="radio" value="Male" name="gender" required> Male
+                    <input type="radio" value="Female" name="gender"> Female
+                    <input type="radio" value="Other" name="gender"> Other
+
+                    <div>
+                        </label><br>
+
+                        <label for="email"><b>Email-ID</b></label>
+                        <input type="email" placeholder="Enter Email Adress" name="email" required>
+                        <label>
+
+                            <p> </p>
+                            <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="At least 6 characters" name="psw" required>
+                        <label for="psw-repeat"><b>Re-Enter Password</b></label>
+                        <input type="password" placeholder="At least 6 characters" name="psw-re-enter" required>
+                        <p>To create an account you should agree to our terms and conditions To read our terms and conditions Open link in new tab <a href="https://lbb.in/policies" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                        <label>
+                                <input type="checkbox" name="remember" style="margin-bottom:15px" required> I Agree
+                            </label>
+                        <div class="clearfix">
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                    </div>
+    </form>
+    </div>
+
+    <script>
+        var modal = document.getElementById('id01');
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    </body>
+
+</html>
